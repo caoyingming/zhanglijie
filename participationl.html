@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>参与项目</title>
+	<link rel="stylesheet" type="text/css" href="css/lib/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/participationl.css">
+</head>
+<body>
+	<div id="container" class="flex-ver">
+		<section class="flex-1">
+		<div>
+			<div class="hor-nav">
+				<dl class="flex-hor">
+					<dt><img src="images/left_03.png"></dt>
+					<dd>
+						<h4>如益北京海淀区体验馆</h4>
+						<div class="start"><span>最低认投2万</span></div>
+					</dd>
+				</dl>
+			</div>
+			<ul>
+				
+				<li>
+					<div class="flex-hor">
+						<div class="flex-1 summ">
+							<h4>我要认投(金额)</h4>
+						</div>
+						<div class="calculate">
+							<div class="gw_num">
+								<span class="jian">-</span>
+							    <span class="num">1</span>
+								<span class="add">+</span>
+							</div>
+						</div>
+					</div>
+					<div></div>
+				</li>
+				<li>
+					<span>合作伙伴信息</span>
+				</li>
+				<li>
+					<input type="text" name="" placeholder="请输入您的姓名">
+				</li>
+				<li>
+					<input type="text" name="" placeholder="请输入您的联系方式">
+				</li>
+
+
+			</ul>
+			</div>
+			<div class="choice flex-hor">
+				<form action="">
+					<input type="checkbox" class="check">
+				</form>
+				<span>同意《股东用户员用户》风险提示书所述条款和协议 </span>
+			</div>
+		</section>
+		<footer>
+			<a>预约</a>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		//加的效果
+		$(".add").click(function(){
+			//alert(1)
+			var n=$(this).prev().text();
+			var num=parseInt(n)+1;
+			if(num==0){ return;}
+			$(this).prev().text(num);
+			});
+			//减的效果
+			$(".jian").click(function(){
+			var n=$(this).next().text();
+			var num=parseInt(n)-1;
+			if(num==0){ return}
+			$(this).next().text(num);
+		});
+	})
+	</script>
+</body>
+</html>
